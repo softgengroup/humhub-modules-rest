@@ -132,6 +132,7 @@ class Events
         static::addCalendarModuleRules();
         static::addTasksModuleRules();
         static::addCfilesModuleRules();
+        static::addGardenModuleRules();
     }
 
     private static function addWikiModuleRules()
@@ -252,6 +253,21 @@ class Events
             ], true);
         } else {
             static::addModuleNotFoundRoutes('cfiles');
+        }
+    }
+
+    private static function addGardenModuleRules()
+    {
+        if (Yii::$app->getModule('garden')) {
+            Yii::$app->urlManager->addRules([
+
+                // Geographer
+                ['pattern' => 'api/v1/g/country/', 'route' => 'rest/garden/geographer/country/index', 'verb' => ['GET', 'HEAD']],
+                ['pattern' => 'api/v1/g/country/<id:\s+>/state/', 'route' => 'rest/garden/geographer/state/index', 'verb' => ['GET', 'HEAD']],
+
+            ], true);
+        } else {
+            static::addModuleNotFoundRoutes('garden');
         }
     }
 

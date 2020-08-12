@@ -1,0 +1,25 @@
+{
+    "name": "softgengroup/humhub-rest",
+    "description": "HumHub REST Api module for GardenOfLove project - extended from official humhub/humhub-modules-rest",
+    "keywords": ["humhub", "rest", "api"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Armin Rezayati",
+            "email": "armin.rezayati@gmail.com"
+        }
+    ],
+    "require": {
+        "humhub/humhub": "*",
+        "yiisoft/yii2": "*"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "humhub\\modules\\rest\\": ""
+        }
+    }
+}
