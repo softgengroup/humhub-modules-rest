@@ -1,6 +1,6 @@
 <?php
 
-namespace humhub\modules\rest\controllers\garden;
+namespace humhub\modules\rest\controllers\garden\geographer;
 
 use humhub\modules\rest\components\BaseController;
 use humhub\modules\rest\definitions\garden\GeographerDefinitions;

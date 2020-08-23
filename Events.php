@@ -262,8 +262,8 @@ class Events
             Yii::$app->urlManager->addRules([
 
                 // Geographer
-                ['pattern' => 'api/v1/g/country/', 'route' => 'rest/garden/geographer/country/index', 'verb' => ['GET', 'HEAD']],
-                ['pattern' => 'api/v1/g/country/<id:\s+>/state/', 'route' => 'rest/garden/geographer/state/index', 'verb' => ['GET', 'HEAD']],
+                ['pattern' => 'api/v1/g/geographer/country/', 'route' => 'rest/garden/geographer/country/index', 'verb' => ['GET', 'HEAD']],
+                ['pattern' => 'api/v1/g/geographer/<id:\s+>/state/', 'route' => 'rest/garden/geographer/state/index', 'verb' => ['GET', 'HEAD']],
 
             ], true);
         } else {
